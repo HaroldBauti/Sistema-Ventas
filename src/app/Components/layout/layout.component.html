@@ -1,1 +1,56 @@
-<p>layout works!</p>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <h1>Sistema Ventas</h1>
+        <button mat-icon-button (click)="sidenav.toggle();">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container color="secondary">
+    <mat-sidenav #sidenav opened="true" mode="side" style="width:200px">
+        <mat-nav-list>
+            <mat-list-item routerLink="/pages/dashboard">
+                <div style="display: flex; align-items: center;">
+                    <mat-icon mat-list-icon>dashboard</mat-icon>
+                    <span>Dashboard</span>  
+                </div>
+
+            </mat-list-item>
+            <mat-list-item routerLink="/pages/usuarios">
+                <div style="display: flex; align-items: center;">
+                    <mat-icon mat-list-icon>group</mat-icon>
+                    <span>Usuarios</span>
+                </div>
+            </mat-list-item>
+            <mat-list-item routerLink="/pages/productos">
+                <div style="display: flex; align-items: center;">
+                    <mat-icon mat-list-icon>collections_bookmark</mat-icon>
+                    <div mat-line>Productos</div>
+                </div>
+            </mat-list-item>
+            <mat-list-item routerLink="/pages/venta">
+                <div style="display: flex; align-items: center;">
+                    <mat-icon mat-list-icon>currency_exchange</mat-icon>
+                    <div mat-line>Venta</div>
+                </div>
+            </mat-list-item>
+            <mat-list-item routerLink="/pages/historial_venta">
+                <div style="display: flex; align-items: center;">
+                    <mat-icon mat-list-icon>edit_note</mat-icon>
+                    <div mat-line>Historial venta</div>
+                </div>
+            </mat-list-item>
+            <mat-list-item routerLink="/pages/reporte">
+                <div style="display: flex; align-items: center;">
+                    <mat-icon mat-list-icon>receipt</mat-icon>
+                    <div mat-line>Reportes</div>
+                </div>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 90vh;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -8,12 +8,15 @@ import { ProductoComponent } from './Pages/producto/producto.component';
 import { VentaComponent } from './Pages/venta/venta.component';
 import { HistorialVentaComponent } from './Pages/historial-venta/historial-venta.component';
 import { ReporteComponent } from './Pages/reporte/reporte.component';
+import { SharedModule } from '../../Reutilizable/shared/shared.module';
+import { RouterOutlet } from '@angular/router';
 
 @NgModule({
   declarations: [
-    
+
   ],
   imports: [
+    RouterOutlet,
     CommonModule,
     LayoutRoutingModule,
     DashBoardComponent,
@@ -21,7 +24,8 @@ import { ReporteComponent } from './Pages/reporte/reporte.component';
     ProductoComponent,
     VentaComponent,
     HistorialVentaComponent,
-    ReporteComponent
+    ReporteComponent,
+    SharedModule
   ]
 })
 export class LayoutModule { }
