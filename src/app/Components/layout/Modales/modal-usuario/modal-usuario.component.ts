@@ -9,12 +9,11 @@ import { UsuarioService } from '../../../../Services/usuario.service';
 import { UtilidadService } from '../../../../Reutilizable/utilidad.service';
 import { share } from 'rxjs';
 import { SharedModule } from '../../../../Reutilizable/shared/shared.module';
-import { MatFormField } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-modal-usuario',
   standalone: true,
-  imports: [SharedModule,MatFormField],
+  imports: [SharedModule],
   providers:[UsuarioService,RolService],
   templateUrl: './modal-usuario.component.html',
   styleUrl: './modal-usuario.component.css'
