@@ -50,16 +50,19 @@ export class LoginComponent{
     
     this._usuarioServicio.IniciarSesion(request).subscribe({
       next:(data)=>{
+        console.log(data.value);
         if(data.status){
           this.utilidadServicio.GuardarSesionUsuario(data.value);
           this.router.navigate(["pages"]);
         }else{
           this.utilidadServicio.MostrarAlerta("No se encontraron coincidencias","Opps!");
+          this.mostrarLoading=false;
         }
       },complete:()=>{
         this.mostrarLoading=false;
       },error:()=>{
         this.utilidadServicio.MostrarAlerta("Hubo un error","Opps!");
+        this.mostrarLoading=false;
       }
     });
 
