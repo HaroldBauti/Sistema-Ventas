@@ -8,10 +8,10 @@ import { Sesion } from '../Interfaces/sesion';
 })
 export class UtilidadService {
 
-  constructor(private _nackBar:MatSnackBar) { }
+  constructor(private _snackBar:MatSnackBar) { }
 
   MostrarAlerta(mensaje:string,tipo:string){
-    this._nackBar.open(mensaje,tipo,{
+    this._snackBar.open(mensaje,tipo,{
       horizontalPosition:"end",
       verticalPosition:"top",
       duration:3000 //representacion en milisegundos

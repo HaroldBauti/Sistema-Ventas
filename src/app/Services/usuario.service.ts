@@ -11,7 +11,7 @@ import { Usuario } from '../Interfaces/usuario';
 })
 export class UsuarioService {
 
-  private urlApi:string=environment.endpoint+"Usuario/";
+  private readonly urlApi:string=environment.endpoint+"Usuario/";
 
   constructor(private http:HttpClient) { }
 

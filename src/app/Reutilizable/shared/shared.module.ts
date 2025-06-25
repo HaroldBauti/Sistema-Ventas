@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ReactiveFormsModule,FormsModule} from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 //Componentens de angular material
 import { MatCardModule } from '@angular/material/card'; 
@@ -30,14 +29,18 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { MatNativeDateModule } from '@angular/material/core';
 import { MomentDateModule } from '@angular/material-moment-adapter';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule
+    
   ],
   exports:[
-    CommonModule,ReactiveFormsModule,FormsModule,HttpClientModule,MatCardModule,MatInputModule,
+
+    HttpClientModule,
+    CommonModule,ReactiveFormsModule,FormsModule,MatCardModule,MatInputModule,
     MatSelectModule,MatProgressBarModule,MatProgressSpinnerModule,MatGridListModule,LayoutModule,
     MatToolbarModule,MatSidenavModule,MatButtonModule,MatIconModule,MatListModule,MatTableModule,
     MatPaginatorModule,MatDialogModule,MatSnackBarModule,MatTooltipModule,MatAutocompleteModule,
