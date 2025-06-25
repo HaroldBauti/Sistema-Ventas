@@ -15,7 +15,7 @@
             <mat-grid-tile>
                 <mat-form-field appearance="outline">
                     <mat-label>Categoria</mat-label>
-                    <mat-select formControlName="idRol">
+                    <mat-select formControlName="idCategoria">
                         <mat-option *ngFor="let item of listaCategorias" [value]="item.idCategoria">{{item.nombre}}</mat-option>
                     </mat-select>
                 </mat-form-field>

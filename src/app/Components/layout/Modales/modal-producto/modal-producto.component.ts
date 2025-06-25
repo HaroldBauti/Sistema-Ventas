@@ -15,7 +15,7 @@ import { SharedModule } from '../../../../Reutilizable/shared/shared.module';
   selector: 'app-modal-producto',
   standalone: true,
   imports: [SharedModule],
-  providers:[ProductoService],
+  providers:[ProductoService,CategoriaService],
   templateUrl: './modal-producto.component.html',
   styleUrl: './modal-producto.component.css'
 })
