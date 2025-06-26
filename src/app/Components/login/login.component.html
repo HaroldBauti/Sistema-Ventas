@@ -2,12 +2,12 @@
 <div class="body">
     <mat-card class="loginCard">
         <div class="header">
-            <h2>Login</h2>
+            <h2>Iniciar Sesión</h2>
         </div>
         <mat-card-content style="padding-bottom:15px">
             <form [formGroup]="formulariologin" (ngSubmit)="IniciarSesion()">
                 <mat-form-field class="full-width" appearance="outline">
-                    <mat-label>Email</mat-label>
+                    <mat-label>Correo electrónico</mat-label>
                     <input formControlName="email" matInput autocomplete="off">
                     <mat-icon matSuffix>mail</mat-icon>
 
