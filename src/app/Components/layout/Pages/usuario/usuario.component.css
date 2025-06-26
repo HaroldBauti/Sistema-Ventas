@@ -5,3 +5,10 @@
     font-size: 14px;
     width: 100%;    
 }
+.dashboard-card-content{
+    padding-top: 10px;
+}
+.buttonNuevoUsuario{
+    
+    padding: 10px;
+}
