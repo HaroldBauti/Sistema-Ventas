@@ -29,6 +29,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { MatNativeDateModule } from '@angular/material/core';
 import { MomentDateModule } from '@angular/material-moment-adapter';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [],
@@ -37,6 +38,8 @@ import { MomentDateModule } from '@angular/material-moment-adapter';
     
   ],
   exports:[
+
+    HttpClientModule,
     CommonModule,ReactiveFormsModule,FormsModule,MatCardModule,MatInputModule,
     MatSelectModule,MatProgressBarModule,MatProgressSpinnerModule,MatGridListModule,LayoutModule,
     MatToolbarModule,MatSidenavModule,MatButtonModule,MatIconModule,MatListModule,MatTableModule,
