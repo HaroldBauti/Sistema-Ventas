@@ -6,6 +6,8 @@ import { Router, RouterModule } from '@angular/router';
 import { Menu } from '../../Interfaces/menu';
 import { MenuService } from '../../Services/menu.service';
 import { UtilidadService } from '../../Reutilizable/utilidad.service';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { authInterceptor } from '../../Custom/auth.interceptor';
 
 @Component({
   selector: 'app-layout',
@@ -30,12 +32,12 @@ export class LayoutComponent {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
+      
     const usuario=this._utilidadServicio.ObtenerSesionUsuario();
 
     if(usuario!=null){
       this.correoUsuario=usuario.correo;
-      this.rolUsuario=usuario.descripcionRol;
-
+      this.rolUsuario=usuario.rolDescription;
       this._menuServicio.Lista(usuario.idUsuario).subscribe({
         next:(data)=>{
           if(data.status){ 

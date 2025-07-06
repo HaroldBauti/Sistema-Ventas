@@ -30,4 +30,7 @@ export class UsuarioService {
   Eliminar(id:number):Observable<ResponseApi>{
     return this.http.delete<ResponseApi>(`${this.urlApi}Eliminar/${id}`)
   }
+  ValidarToken(token:string):Observable<ResponseApi>{
+    return this.http.get<ResponseApi>(`${this.urlApi}ValidarToken?token=${token}`);
+  }
 }

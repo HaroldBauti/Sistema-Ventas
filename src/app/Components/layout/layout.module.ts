@@ -10,6 +10,7 @@ import { HistorialVentaComponent } from './Pages/historial-venta/historial-venta
 import { ReporteComponent } from './Pages/reporte/reporte.component';
 import { SharedModule } from '../../Reutilizable/shared/shared.module';
 import { RouterOutlet } from '@angular/router';
+import { authInterceptor } from '../../Custom/auth.interceptor';
 
 @NgModule({
   declarations: [

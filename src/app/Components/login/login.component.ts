@@ -70,6 +70,7 @@ export class LoginComponent {
   private procesarRespuesta(data: any): void {
     if (data.status) {
       this.utilidadServicio.GuardarSesionUsuario(data.value);
+      
       this.router.navigate(['pages']);
     } else {
       this.utilidadServicio.MostrarAlerta(

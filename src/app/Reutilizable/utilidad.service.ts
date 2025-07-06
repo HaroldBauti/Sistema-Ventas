@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { jwtDecode } from 'jwt-decode';
 import { Sesion } from '../Interfaces/sesion';
+import { Usuario } from '../Interfaces/usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -18,12 +20,14 @@ export class UtilidadService {
     })
   }
 
-  GuardarSesionUsuario(usuarioSesion:Sesion){
-    localStorage.setItem("usuario",JSON.stringify(usuarioSesion));
+  GuardarSesionUsuario(usuarioSesion:string){
+    // localStorage.setItem("usuario",JSON.stringify(usuarioSesion));
+    localStorage.setItem("usuario",usuarioSesion);
   }
   ObtenerSesionUsuario(){
     const dataCadena=localStorage.getItem("usuario");
-    const usuario=JSON.parse(dataCadena!)
+    const usuario =jwtDecode<Usuario>(dataCadena!);
+  
     return usuario;
   }
   EliminarSesionUsuario(){
