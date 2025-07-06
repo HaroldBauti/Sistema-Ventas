@@ -2,12 +2,14 @@ import { Component,Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Venta } from '../../../../Interfaces/venta';
 import { DetalleVenta } from '../../../../Interfaces/detalle-venta';
+import { SharedModule } from '../../../../Reutilizable/shared/shared.module';
+
 
 
 @Component({
   selector: 'app-modal-detalle-venta',
   standalone: true,
-  imports: [],
+  imports: [SharedModule],
   templateUrl: './modal-detalle-venta.component.html',
   styleUrl: './modal-detalle-venta.component.css'
 })

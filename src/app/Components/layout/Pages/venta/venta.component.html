@@ -4,8 +4,7 @@
         <form [formGroup]="formularioProductoVenta" (ngSubmit)="AgregarProductosParaVenta()">
             <mat-grid-list cols="4" rowHeight="80px">
                 <mat-grid-tile [colspan]="2">
-                    <!-- <mat-form-field class="full-width" appearance="fill"> -->
-                    <mat-form-field appearance="fill" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.md="45%" fxFlex.lg="45%">
+                    <mat-form-field class="full-width" appearance="fill">
                         <mat-label>Producto</mat-label>
                         <input matInput type="text" placeholder="Buscar..." [matAutocomplete]="auto" formControlName="producto">
                         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" 
@@ -64,12 +63,12 @@
                    <td mat-cell *matCellDef="let element">{{element.cantidad}}</td>
                </ng-container>
                <ng-container matColumnDef="precio">    
-                   <th mat-header-cell *matHeaderCellDef>Rol</th>
+                   <th mat-header-cell *matHeaderCellDef>Precio</th>
                    <td mat-cell *matCellDef="let element">{{element.precioTexto}}</td>
                </ng-container>
               
                <ng-container matColumnDef="total">    
-                   <th mat-header-cell *matHeaderCellDef>Total.</th>
+                   <th mat-header-cell *matHeaderCellDef>Total</th>
                    <td mat-cell *matCellDef="let element">{{element.totalTexto}}</td>
                </ng-container>
 
